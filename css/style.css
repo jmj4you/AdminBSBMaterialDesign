@@ -8031,3 +8031,16 @@ html.ie11 .dropdown-menu ul.menu li a {
 html.ie11 .bs-searchbox .form-control {
   width: 90%; }
 
+/* JMJ*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .container-fluid {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
