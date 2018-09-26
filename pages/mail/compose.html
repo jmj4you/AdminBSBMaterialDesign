@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Blank Page | Bootstrap Based Admin Template - Material Design</title>
+    <title>MAIL BOX | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -27,6 +27,9 @@
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="../../css/themes/all-themes.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="../../css/mail-box.css">
+
 </head>
 
 <body class="theme-red">
@@ -543,10 +546,7 @@
                             <a href="../../pages/examples/forgot-password.html">Forgot Password</a>
                         </li>
                         <li class="active">
-                            <a href="../../pages/examples/blank.html">Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="../../pages/mail/inbox.html">Inbox</a>
+                            <a href="../../pages/examples/blank.html">MAIL BOX</a>
                         </li>
                         <li>
                             <a href="../../pages/examples/404.html">404 - Not Found</a>
@@ -802,9 +802,104 @@
 
 <section class="content">
     <div class="container-fluid">
-        <div class="block-header">
-            <h2>BLANK PAGE</h2>
+        <div class="block-header"><h2>MAIL BOX</h2></div>
+
+        <!-- Page here-->
+
+        <div class="mail-env"> <!-- compose new email button -->
+            <div class="mail-sidebar-row visible-xs">
+                <a href="compose.html"
+                   class="btn btn-success btn-icon btn-block">
+                    Compose Mail
+                    <i class="entypo-pencil"></i> </a></div>
+
+            <!-- Mail Body -->
+
+            <div class="mail-body">
+                <div class="mail-header"> <!-- title -->
+                    <div class="mail-title">
+                        Compose Mail <i class="entypo-pencil"></i></div> <!-- links -->
+                    <div class="mail-links"><a href="#" class="btn btn-default"> <i class="entypo-cancel"></i> </a> <a
+                            href="#" class="btn btn-default btn-icon">
+                        Draft
+                        <i class="entypo-tag"></i> </a> <a class="btn btn-success btn-icon">
+                        Send
+                        <i class="entypo-mail"></i> </a></div>
+                </div>
+                <div class="mail-compose">
+                    <form method="post" role="form">
+                        <div class="form-group"><label for="to">To:</label> <input type="text" class="form-control"
+                                                                                   id="to" tabindex="1"/>
+                            <div class="field-options"><a href="javascript:;"
+                                                          onclick="$(this).hide(); $('#cc').parent().removeClass('hidden'); $('#cc').focus();">CC</a>
+                                <a href="javascript:;"
+                                   onclick="$(this).hide(); $('#bcc').parent().removeClass('hidden'); $('#bcc').focus();">BCC</a>
+                            </div>
+                        </div>
+                        <div class="form-group hidden"><label for="cc">CC:</label> <input type="text"
+                                                                                          class="form-control" id="cc"
+                                                                                          tabindex="2"/></div>
+                        <div class="form-group hidden"><label for="bcc">BCC:</label> <input type="text"
+                                                                                            class="form-control"
+                                                                                            id="bcc" tabindex="2"/>
+                        </div>
+                        <div class="form-group"><label for="subject">Subject:</label> <input type="text"
+                                                                                             class="form-control"
+                                                                                             id="subject" tabindex="1"/>
+                        </div>
+                        <div class="compose-message-editor"><textarea class="form-control wysihtml5"
+
+                                                                      name="sample_wysiwyg"
+                                                                      id="sample_wysiwyg"></textarea></div>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="mail-sidebar"> <!-- compose new email button -->
+                <div class="mail-sidebar-row hidden-xs">
+                    <a href="compose.html"
+                       class="btn btn-success btn-icon btn-block">
+                        Compose Mail
+                        <i class="entypo-pencil"></i> </a></div> <!-- menu -->
+                <ul class="mail-menu">
+                    <li class="active"><a href="inbox.html"> <span class="badge badge-danger pull-right">6</span>
+                        Inbox
+                    </a></li>
+                    <li><a href="#"> <span class="badge badge-gray pull-right">1</span>
+                        Sent
+                    </a></li>
+                    <li><a href="#">
+                        Drafts
+                    </a></li>
+                    <li><a href="#"> <span class="badge badge-gray pull-right">1</span>
+                        Spam
+                    </a></li>
+                    <li><a href="#">
+                        Trash
+                    </a></li>
+                </ul>
+                <div class="mail-distancer"></div>
+                <h4>Tags</h4> <!-- menu -->
+                <ul class="mail-menu">
+                    <li><a href="#"> <span class="badge badge-danger badge-roundless pull-right"></span>
+                        Business
+                    </a></li>
+                    <li><a href="#"> <span class="badge badge-info badge-roundless pull-right"></span>
+                        Sports
+                    </a></li>
+                    <li><a href="#"> <span class="badge badge-warning badge-roundless pull-right"></span>
+                        Friends
+                    </a></li>
+                </ul>
+            </div>
         </div>
+        <hr/>
+
+
+        <!-- Page here-->
+
     </div>
 </section>
 
